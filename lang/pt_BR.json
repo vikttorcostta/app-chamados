@@ -1,0 +1,8 @@
+{
+    "User" : "Usuário",
+    "Name" : "Nome",
+    "Password" : "Senha",
+    "Role" : "Permissão",
+    "Password confirmation" : "Confirme sua senha",
+    "Category" : "Categoria"
+}
