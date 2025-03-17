@@ -11,7 +11,9 @@
 <!-- Header fixo -->
 <header class="fixed top-0 left-0 w-full bg-gray-800 shadow-lg z-50 py-4 px-6 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-blue-400">Helpdesk Bugados</h1>
-    <button class="bg-blue-500 px-5 py-2 rounded-lg shadow-md hover:bg-blue-600">Login</button>
+    <a href="https://app-chamados-main-hepr4t.laravel.cloud/admin/login">
+        <button class="bg-blue-500 px-5 py-2 rounded-lg shadow-md hover:bg-blue-600">Login</button>
+    </a>
 </header>
 
 <!-- Hero Section -->
@@ -21,7 +23,9 @@
     <p class="text-gray-400 mt-4 text-lg max-w-xl">Nosso Helpdesk facilita a resolução de problemas para sua equipe e clientes.</p>
     <div class="mt-8 flex flex-col sm:flex-row gap-4">
         <button class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">Fale Conosco</button>
-        <button class="bg-gray-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-800">Login</button>
+        <a href="https://app-chamados-main-hepr4t.laravel.cloud/admin/login">
+            <button type="button" class="bg-gray-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-800">Login</button>
+        </a>
     </div>
 </section>
 
@@ -72,7 +76,7 @@
 <!-- Footer -->
 <footer class="bg-gray-800 w-full py-6 text-center mt-12">
     <div class="max-w-4xl mx-auto px-6">
-        <p class="text-gray-400 text-sm">© 2025 HelpdeskPro. Todos os direitos reservados.</p>
+        <p class="text-gray-400 text-sm">© 2025 Equipe Bugados. Todos os direitos reservados.</p>
         <div class="flex justify-center space-x-4 mt-2">
             <a href="#" class="text-blue-400 hover:text-blue-500">Termos de Serviço</a>
             <a href="#" class="text-blue-400 hover:text-blue-500">Política de Privacidade</a>
