@@ -13,15 +13,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
 
-//         \App\Models\User::factory()->create([
-//             'name' => 'Victor Costa',
-//             'email' => 'victorcosta@bugados.com.br',
-//             'password' => bcrypt('12345678'),
-//             'role' => 'user',
-//         ]);
-//
+            User::factory()->create([
+                 'name' => 'Victor Costa',
+                 'email' => 'victorcosta@bugados.com.br',
+                 'password' => bcrypt('12345678'),
+                 'role' => 'user',
+            ]);
+
+            User::factory(25)->create();
+
 //        \App\Models\User::factory()->create([
 //            'name' => 'Davi Caridade',
 //            'email' => 'davicaridade@bugados.com.br',
@@ -55,28 +56,28 @@ class DatabaseSeeder extends Seeder
 //            'name' => 'Softwares e Sistemas'
 //        ]);
 //
-        \App\Models\Category::factory()->create([
-            'name' => 'Impressoras e Periféricos'
-        ]);
-
-        \App\Models\Category::factory()->create([
-            'name' => 'Telefonia e Comunicação'
-        ]);
-
-        \App\Models\Category::factory()->create([
-            'name' => 'Segurança e Ameaças'
-        ]);
-
-        \App\Models\Category::factory()->create([
-            'name' => 'Backup e Arquivos'
-        ]);
-
-        \App\Models\Category::factory()->create([
-            'name' => 'Equipamentos Novos'
-        ]);
-
-        \App\Models\Category::factory()->create([
-            'name' => 'Outros'
-        ]);
+//        \App\Models\Category::factory()->create([
+//            'name' => 'Impressoras e Periféricos'
+//        ]);
+//
+//        \App\Models\Category::factory()->create([
+//            'name' => 'Telefonia e Comunicação'
+//        ]);
+//
+//        \App\Models\Category::factory()->create([
+//            'name' => 'Segurança e Ameaças'
+//        ]);
+//
+//        \App\Models\Category::factory()->create([
+//            'name' => 'Backup e Arquivos'
+//        ]);
+//
+//        \App\Models\Category::factory()->create([
+//            'name' => 'Equipamentos Novos'
+//        ]);
+//
+//        \App\Models\Category::factory()->create([
+//            'name' => 'Outros'
+//        ]);
     }
 }
