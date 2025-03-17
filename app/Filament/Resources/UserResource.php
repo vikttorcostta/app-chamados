@@ -13,6 +13,9 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\CheckboxList;
+use Filament\Forms\Components\Radio;
 
 class UserResource extends Resource
 {
@@ -38,14 +41,22 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('password')
                     ->required(fn(string $operation): bool => $operation === 'create')
                     ->translateLabel()
-                    ->confirmed(),
+                    ->confirmed()
+                    ->required(),
                 Forms\Components\TextInput::make('password_confirmation')
                     ->translateLabel()
-                    ->requiredWith('password'),
-                Forms\Components\TextInput::make('role')
+                    ->requiredWith('password')
+                    ->required(),
+                Forms\Components\Radio::make('role')
+                    ->label('Permissão')
+                    ->options([
+                        'admin' => 'Administrador',
+                        'user' => 'Usuário',
+                        'support' => 'Suporte'
+                    ])
+                    ->inline()
                     ->translateLabel()
                     ->required()
-                    ->maxLength(255),
             ]);
     }
 
@@ -73,6 +84,7 @@ class UserResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -94,6 +106,7 @@ class UserResource extends Resource
             'index' => Pages\ListUsers::route('/'),
             'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
+            'view' => Pages\ViewUser::route('/{record}'),
         ];
     }
 }
