@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
-    protected static ?string $navigationLabel = 'Categoria';
+    protected static ?string $navigationLabel = 'Categorias';
     protected static ?string $modelLabel = 'Categoria';
     protected static ?string $pluralModelLabel = 'Categorias';
     protected static ?string $navigationIcon = 'heroicon-o-square-3-stack-3d';

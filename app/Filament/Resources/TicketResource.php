@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Auth;
 class TicketResource extends Resource
 {
     protected static ?string $model = Ticket::class;
-    protected static ?string $navigationLabel = 'Ticket';
+    protected static ?string $navigationLabel = 'Tickets';
     protected static ?string $modelLabel = 'Ticket';
     protected static ?string $pluralModelLabel = 'Tickets';
     protected static ?string $navigationIcon = 'heroicon-o-ticket';
