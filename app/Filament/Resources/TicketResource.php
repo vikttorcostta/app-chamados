@@ -107,6 +107,9 @@ class TicketResource extends Resource
                     ->searchable(),
                 TextColumn::make('description')
                     ->label('Descrição')
+                    ->limit(50)
+                    ->tooltip(fn ($record) => $record->description)
+                    ->wrap()
                     ->searchable(),
                 TextColumn::make('opened_at')
                     ->label('Aberto em')
