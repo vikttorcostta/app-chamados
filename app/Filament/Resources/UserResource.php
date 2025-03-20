@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\Radio;
+use Illuminate\Support\Facades\Auth;
 
 class UserResource extends Resource
 {
@@ -70,6 +71,7 @@ class UserResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('role')
                     ->label('Permissão')
+                    ->translateLabel()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Criado em')
@@ -108,5 +110,25 @@ class UserResource extends Resource
             'edit' => Pages\EditUser::route('/{record}/edit'),
             'view' => Pages\ViewUser::route('/{record}'),
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return in_array(Auth::user()->role, ['user','support', 'admin']);
+    }
+
+    public static function canViewAny(): bool
+    {
+        return in_array(Auth::user()->role, ['user','support', 'admin']);
+    }
+
+    public static function canEdit($record): bool
+    {
+        return in_array(Auth::user()->role, ['user','support', 'admin']);
+    }
+
+    public static function canDelete($record): bool
+    {
+        return in_array(Auth::user()->role, ['user','support', 'admin']);
     }
 }
