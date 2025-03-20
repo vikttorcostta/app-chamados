@@ -75,10 +75,10 @@ class UserResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Criado em')
-                    ->dateTime('d/m/Y H:i:s'),
+                    ->dateTime('d/m/Y'),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->label('Atualizado em')
-                    ->dateTime('d/m/Y H:i:s'),
+                    ->dateTime('d/m/Y'),
             ])
             ->filters([
                 //
