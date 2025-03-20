@@ -113,10 +113,10 @@ class TicketResource extends Resource
                     ->searchable(),
                 TextColumn::make('opened_at')
                     ->label('Aberto em')
-                    ->dateTime('d/m/Y H:i:s'),
+                    ->dateTime('d/m/Y'),
                 TextColumn::make('closed_at')
                     ->label('Fechado em')
-                    ->dateTime('d/m/Y H:i:s'),
+                    ->dateTime('d/m/Y'),
                 TextColumn::make('priority')
                     ->label('Prioridade')
                     ->searchable(),
