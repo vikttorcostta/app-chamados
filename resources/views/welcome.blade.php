@@ -40,16 +40,16 @@
     <h2 class="text-3xl font-bold text-blue-400">Funcionalidades</h2>
     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold text-blue-300">Gerenciamento de Chamados</h3>
+            <h3 class="text-xl font-semibold text-blue-300">Abertura e Fechamento de chamados</h3>
             <p class="text-gray-400 mt-2">Acompanhe e resolva problemas de forma organizada e eficiente.</p>
         </div>
         <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold text-blue-300">Integração com E-mail</h3>
-            <p class="text-gray-400 mt-2">Receba e responda chamados diretamente pelo e-mail da sua equipe.</p>
+            <h3 class="text-xl font-semibold text-blue-300">Gerenciamento de Usuários</h3>
+            <p class="text-gray-400 mt-2">Crie usuarios e atribua permissões</p>
         </div>
         <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold text-blue-300">Relatórios e Análises</h3>
-            <p class="text-gray-400 mt-2">Gere relatórios detalhados para acompanhar a performance do seu suporte.</p>
+            <h3 class="text-xl font-semibold text-blue-300">Criação de categorias</h3>
+            <p class="text-gray-400 mt-2">Crie categorias e associe a um chamado</p>
         </div>
     </div>
 </section>
