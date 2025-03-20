@@ -1,0 +1,56 @@
+@startuml diagrama_classes
+
+class User {
+  -id: int
+  __
+  -name: string
+  -email: string
+  -password: string
+  -role: string <<enum>>
+  __
+  +createTicket(title: string, description: string, category: Category): Ticket
+  +respondToTicket(ticket: Ticket, message: string): Response
+}
+
+class Ticket {
+  -id: int
+  __
+  -user: User
+  -category: Category
+  -title: string
+  -description: string
+  -status: string <<enum>>
+  -priority: string <<enum>>
+  -opened_at: DateTime
+  -closed_at: DateTime
+  __
+  +closeTicket(): void
+  +changeStatus(newStatus: string): void
+}
+
+class Category {
+  -id: int
+  __
+  -name: string
+  __
+  +addCategory(name: string): Category
+}
+
+class Response {
+  -id: int
+  __
+  -message: string
+  -date: DateTime
+  -user: User
+  -ticket: Ticket
+  __
+  +addResponse(ticket: Ticket, user: User, message: string): Response
+}
+
+' Relações
+User "1" -- "*" Ticket : "opens"
+User "1" -- "*" Response : "sends"
+Ticket "1" -- "*" Response : "has"
+Ticket "*" -- "1" Category : "belongs to"
+
+@enduml
