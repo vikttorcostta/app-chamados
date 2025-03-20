@@ -97,10 +97,12 @@ class TicketResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('user.name')
+                    ->label('Autor'),
                 TextColumn::make('name')
                     ->label('Título')
                     ->searchable(),
-                TextColumn::make('category_id')
+                TextColumn::make('category.name')
                     ->label('Categoria')
                     ->searchable(),
                 TextColumn::make('description')
