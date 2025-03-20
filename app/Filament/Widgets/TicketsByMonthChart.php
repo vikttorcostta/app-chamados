@@ -4,7 +4,6 @@ namespace App\Filament\Widgets;
 
 use App\Models\Ticket;
 use Filament\Widgets\ChartWidget;
-use Flowframe\Trend\TrendValue;
 use Flowframe\Trend\Trend;
 
 
