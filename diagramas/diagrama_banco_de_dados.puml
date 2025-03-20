@@ -1,0 +1,80 @@
+@startuml
+top to bottom direction
+skinparam linetype polyline
+
+entity categories {
+   name: varchar(255)
+   created_at: timestamp
+   updated_at: timestamp
+   id: bigint unsigned
+}
+entity failed_jobs {
+   uuid: varchar(255)
+   connection: text
+   queue: text
+   payload: longtext
+   exception: longtext
+   failed_at: timestamp
+   id: bigint unsigned
+}
+entity migrations {
+   migration: varchar(255)
+   batch: int
+   id: int unsigned
+}
+entity password_reset_tokens {
+   token: varchar(255)
+   created_at: timestamp
+   email: varchar(255)
+}
+entity personal_access_tokens {
+   tokenable_type: varchar(255)
+   tokenable_id: bigint unsigned
+   name: varchar(255)
+   token: varchar(64)
+   abilities: text
+   last_used_at: timestamp
+   expires_at: timestamp
+   created_at: timestamp
+   updated_at: timestamp
+   id: bigint unsigned
+}
+entity responses {
+   message: text
+   date: datetime
+   ticket_id: bigint unsigned
+   user_id: bigint unsigned
+   created_at: timestamp
+   updated_at: timestamp
+   id: bigint unsigned
+}
+entity  tickets {
+   name: varchar(255)
+   description: text
+   priority: enum('low', 'medium', 'high')
+   status: enum('open', 'in_progress', 'resolved', 'closed')
+   opened_at: datetime
+   closed_at: datetime
+   category_id: bigint unsigned
+   user_id: bigint unsigned
+   created_at: timestamp
+   updated_at: timestamp
+   id: bigint unsigned
+}
+entity  users {
+   name: varchar(255)
+   email: varchar(255)
+   email_verified_at: timestamp
+   password: varchar(255)
+   role: enum('admin', 'user', 'support')
+   remember_token: varchar(100)
+   created_at: timestamp
+   updated_at: timestamp
+   id: bigint unsigned
+}
+
+responses               -[#595959,plain]-^  tickets                : "ticket_id:id"
+responses               -[#595959,plain]-^  users                  : "user_id:id"
+tickets                 -[#595959,plain]-^  categories             : "category_id:id"
+tickets                 -[#595959,plain]-^  users                  : "user_id:id"
+@enduml
