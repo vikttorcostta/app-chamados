@@ -9,7 +9,7 @@ class Response extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['message','date'];
+    protected $fillable = ['message','date', 'ticket_id', 'user_id'];
 
     public function user(){
         return $this->belongsTo(User::class);
