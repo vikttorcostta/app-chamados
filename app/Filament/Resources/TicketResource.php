@@ -163,12 +163,12 @@ class TicketResource extends Resource
 
     public static function canEdit($record): bool
     {
-        return in_array(Auth::user()->role, ['user','support', 'admin']);
+        return in_array(Auth::user()->role, ['support', 'admin']);
     }
 
     public static function canDelete($record): bool
     {
-        return in_array(Auth::user()->role, ['user','support', 'admin']);
+        return in_array(Auth::user()->role, ['support', 'admin']);
     }
 
 
