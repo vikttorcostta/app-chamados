@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             User::factory()->create([
                  'name' => 'Paulo Victor Costa',
                  'email' => 'paulovictoradmin@bugados.com.br',
-                 'password' => bcrypt('12345678'),
+                 'password' => bcrypt(''),
                  'role' => 'admin',
             ]);
 
@@ -26,21 +26,21 @@ class DatabaseSeeder extends Seeder
 //        \App\Models\User::factory()->create([
 //            'name' => 'Davi Caridade',
 //            'email' => 'davicaridade@bugados.com.br',
-//            'password' => bcrypt('12345678'),
+//            'password' => bcrypt(''),
 //            'role' => 'user',
 //        ]);
 //
 //        \App\Models\User::factory()->create([
 //            'name' => 'Gabriel Gomes',
 //            'email' => 'gabrielgomes@bugados.com.br',
-//            'password' => bcrypt('12345678'),
+//            'password' => bcrypt(''),
 //            'role' => 'support',
 //        ]);
 //
 //        \App\Models\User::factory()->create([
 //            'name' => 'Vandson Nascimento',
 //            'email' => 'vandson@bugados.com.br',
-//            'password' => bcrypt('12345678'),
+//            'password' => bcrypt(''),
 //            'role' => 'admin',
 //        ]);
 
